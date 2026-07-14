@@ -23,6 +23,12 @@ const PROJECTS = [
     tag: "Arcade",
     description: "Flappy Bird remake with new gamemodes",
     url: "https://projects.penguinmod.com/5726165555"
+  },
+  {
+    title: "blips",
+    tag: "Idle",
+    description: "Clean and addictive upgrade tree game",
+    url: "https://projects.penguinmod.com/5713128876"
   }
 ];
 
