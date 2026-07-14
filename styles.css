@@ -2,16 +2,6 @@
   box-sizing: border-box;
 }
 :root {
-  --bg: #ffffff;
-  --text: #1a1a1a;
-  --text-dim: #555;
-  --text-faint: #888;
-  --border: #ddd;
-  --border-hover: #999;
-  --thumb-bg: #eee;
-  --link: #1a56db;
-}
-html.dark {
   --bg: #16181d;
   --text: #f0f0f0;
   --text-dim: #b0b0b0;
@@ -26,7 +16,6 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
-  transition: background 0.15s ease, color 0.15s ease;
 }
 header {
   max-width: 900px;
@@ -45,21 +34,6 @@ header p {
   color: var(--text-dim);
   font-size: 15px;
   margin: 0;
-}
-.theme-toggle {
-  flex-shrink: 0;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  color: var(--text);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 13px;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.15s ease;
-}
-.theme-toggle:hover {
-  border-color: var(--border-hover);
 }
 .grid {
   max-width: 900px;
