@@ -2,28 +2,72 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --text-dim: #555;
+  --text-faint: #888;
+  --border: #ddd;
+  --border-hover: #999;
+  --thumb-bg: #eee;
+  --link: #1a56db;
+}
+
+html.dark {
+  --bg: #16181d;
+  --text: #f0f0f0;
+  --text-dim: #b0b0b0;
+  --text-faint: #888;
+  --border: #333;
+  --border-hover: #555;
+  --thumb-bg: #22252b;
+  --link: #6ea8fe;
+}
+
 body {
   margin: 0;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: var(--bg);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 header {
   max-width: 900px;
   margin: 0 auto;
   padding: 48px 24px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-h1 {
+.header-text h1 {
   font-size: 28px;
   margin: 0 0 8px;
 }
 
 header p {
-  color: #555;
+  color: var(--text-dim);
   font-size: 15px;
   margin: 0;
+}
+
+.theme-toggle {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--border-hover);
 }
 
 .grid {
@@ -36,7 +80,7 @@ header p {
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 8px;
   text-decoration: none;
   color: inherit;
@@ -46,7 +90,7 @@ header p {
 }
 
 .card:hover {
-  border-color: #999;
+  border-color: var(--border-hover);
 }
 
 .thumb {
@@ -54,7 +98,7 @@ header p {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  background: #eee;
+  background: var(--thumb-bg);
 }
 
 .card-body {
@@ -64,7 +108,7 @@ header p {
 .tag {
   font-size: 11px;
   text-transform: uppercase;
-  color: #888;
+  color: var(--text-faint);
   letter-spacing: 0.03em;
 }
 
@@ -75,19 +119,19 @@ header p {
 
 .card p {
   font-size: 13px;
-  color: #555;
+  color: var(--text-dim);
   line-height: 1.4;
   margin: 0 0 8px;
 }
 
 .play-link {
   font-size: 13px;
-  color: #1a56db;
+  color: var(--link);
 }
 
 footer {
   text-align: center;
   padding: 0 24px 40px;
-  color: #999;
+  color: var(--text-faint);
   font-size: 12px;
 }
