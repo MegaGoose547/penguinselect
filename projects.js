@@ -7,6 +7,12 @@
 // ---------------------------------------------------------------
 const PROJECTS = [
   {
+    title: "Save the Watermelon",
+    tag: "Arcade",
+    description: "Shoot the bees with the watermelon seeds",
+    url: "https://projects.penguinmod.com/9659193762",
+  },
+  {
     title: "Tetris Friends",
     tag: "Arcade",
     description: "Clean looking Tetris game",
