@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 :root {
   --bg: #ffffff;
   --text: #1a1a1a;
@@ -12,7 +11,6 @@
   --thumb-bg: #eee;
   --link: #1a56db;
 }
-
 html.dark {
   --bg: #16181d;
   --text: #f0f0f0;
@@ -23,7 +21,6 @@ html.dark {
   --thumb-bg: #22252b;
   --link: #6ea8fe;
 }
-
 body {
   margin: 0;
   background: var(--bg);
@@ -31,7 +28,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   transition: background 0.15s ease, color 0.15s ease;
 }
-
 header {
   max-width: 900px;
   margin: 0 auto;
@@ -41,18 +37,15 @@ header {
   justify-content: space-between;
   gap: 20px;
 }
-
 .header-text h1 {
   font-size: 28px;
   margin: 0 0 8px;
 }
-
 header p {
   color: var(--text-dim);
   font-size: 15px;
   margin: 0;
 }
-
 .theme-toggle {
   flex-shrink: 0;
   border: 1px solid var(--border);
@@ -65,11 +58,9 @@ header p {
   cursor: pointer;
   transition: border-color 0.15s ease;
 }
-
 .theme-toggle:hover {
   border-color: var(--border-hover);
 }
-
 .grid {
   max-width: 900px;
   margin: 0 auto;
@@ -78,7 +69,6 @@ header p {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
-
 .card {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -88,11 +78,9 @@ header p {
   overflow: hidden;
   transition: border-color 0.15s ease;
 }
-
 .card:hover {
   border-color: var(--border-hover);
 }
-
 .thumb {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -100,35 +88,29 @@ header p {
   display: block;
   background: var(--thumb-bg);
 }
-
 .card-body {
   padding: 12px 14px 16px;
 }
-
 .tag {
   font-size: 11px;
   text-transform: uppercase;
   color: var(--text-faint);
   letter-spacing: 0.03em;
 }
-
 .card h3 {
   font-size: 16px;
   margin: 4px 0 6px;
 }
-
 .card p {
   font-size: 13px;
   color: var(--text-dim);
   line-height: 1.4;
   margin: 0 0 8px;
 }
-
 .play-link {
   font-size: 13px;
   color: var(--link);
 }
-
 footer {
   text-align: center;
   padding: 0 24px 40px;
