@@ -4,7 +4,6 @@
 //   tag
 //   description
 //   url
-//   image
 // ---------------------------------------------------------------
 const PROJECTS = [
   {
@@ -12,21 +11,18 @@ const PROJECTS = [
     tag: "Arcade",
     description: "Clean looking Tetris game",
     url: "https://projects.penguinmod.com/3224119322",
-    image: ""
   },
   {
     title: "CYNTAX",
     tag: "Idle",
     description: "Cool looking idle game",
     url: "https://projects.penguinmod.com/2479807702",
-    image: ""
   },
   {
     title: "Flappy Bird Legacy",
     tag: "Arcade",
     description: "Flappy Bird remake with new gamemodes",
     url: "https://projects.penguinmod.com/5726165555",
-    image: ""
   }
 ];
 
