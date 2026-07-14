@@ -30,6 +30,26 @@ const PROJECTS = [
   }
 ];
 
+function getThumbnails(title) {
+  return THUMBNAIL_EXTENSIONS.map(
+    ext => `${THUMBNAIL_FOLDER}/${encodeURIComponent(title)}.${ext}`
+  );
+}
+
+function setThumbnails(img, candidates) {
+  let i = 0;
+  iml.src = thumbnails[i];
+  img.onerror = () => {
+    i++;
+    if (i < thumbnails.length) {
+      img.src = thumbnails[i];
+    } else {
+      img.onerror = null;
+      img.src = PLACEHOLDER_IMG;
+    }
+  };
+}
+
 function renderGallery() {
   const gallery = document.getElementById('gallery');
 
