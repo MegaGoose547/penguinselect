@@ -68,10 +68,31 @@ function setThumbnails(img, candidates) {
   };
 }
 
-function renderGallery() {
-  const gallery = document.getElementById('gallery');
+function populateTagFilter() {
+  const select = document.getElementById('tagFilter');
+  if (!select) return;
 
-  PROJECTS.forEach(p => {
+  const tags = [...new Set(PROJECTS.map(p => p.tag))].sort();
+  tags.forEach(tag => {
+    const option = document.createElement('option');
+    option.value = tag;
+    option.textContent = tag;
+    select.appendChild(option);
+  });
+
+  select.addEventListener('change', () => renderGallery(select.value));
+}
+
+function renderGallery(activeTag = 'all') {
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = '';
+
+  const projects = PROJECTS
+    .filter(p => activeTag === 'all' || p.tag === activeTag)
+    .slice()
+    .sort((a, b) => a.tag.localeCompare(b.tag) || a.title.localeCompare(b.title));
+
+  projects.forEach(p => {
     const card = document.createElement('a');
     card.className = 'card';
     card.href = p.url;
@@ -95,4 +116,7 @@ function renderGallery() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', renderGallery);
+document.addEventListener('DOMContentLoaded', () => {
+  populateTagFilter();
+  renderGallery();
+});
