@@ -7,6 +7,12 @@
 // ---------------------------------------------------------------
 const PROJECTS = [
   {
+    title: "Luigi Poker",
+    tag: "Arcade",
+    description: "Luigi Poker PenguinMod port",
+    url: "https://projects.penguinmod.com/4314123354"
+  },
+  {
     title: "Save the Watermelon",
     tag: "Arcade",
     description: "Shoot the bees with the watermelon seeds",
