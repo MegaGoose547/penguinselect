@@ -35,6 +35,28 @@ header p {
   font-size: 15px;
   margin: 0;
 }
+.toolbar {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.toolbar select {
+  background: var(--thumb-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-family: inherit;
+}
+.toolbar select:hover {
+  border-color: var(--border-hover);
+}
 .grid {
   max-width: 900px;
   margin: 0 auto;
