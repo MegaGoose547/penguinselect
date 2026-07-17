@@ -7,6 +7,18 @@
 // ---------------------------------------------------------------
 const PROJECTS = [
   {
+    title: "Blindfolded",
+    tag: "Platformer",
+    description: "A game where you can only see what you touch",
+    url: "https://projects.penguinmod.com/5979774842"
+  },
+  {
+    title: "Keep It Hidden",
+    tag: "Strategy",
+    description: "Escape the monster",
+    url: "https://projects.penguinmod.com/1139193694"
+  },
+  {
     title: "Bees!!",
     tag: "Idle",
     description: "Grow bees to farm flowers",
